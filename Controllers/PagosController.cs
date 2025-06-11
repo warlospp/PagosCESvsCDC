@@ -37,9 +37,8 @@ namespace PagosCESvsCDC.Controllers
 
             await _cesContext.Pagos.AddRangeAsync(pagos);
             await _cdcContext.Pagos.AddRangeAsync(pagos);
-            await _cesContext.SaveChangesAsync();
+            await _cesContext.SaveChangesAsync();            
             await _cdcContext.SaveChangesAsync();
-
             return Ok(new { mensaje = "Inserción masiva realizada en ambas bases de datos." });
         }
     }

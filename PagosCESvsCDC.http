@@ -1,0 +1,6 @@
+@PagosCESvsCDC_HostAddress = http://localhost:5034
+
+GET {{PagosCESvsCDC_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

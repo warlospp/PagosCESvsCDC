@@ -15,7 +15,7 @@ function Create-SasToken {
 }
 
 $resourceUri = "https://arquitecturadatosdemoces.servicebus.windows.net/pagos_ces"  
-$keyName = "..."
-$key = "..."
+$keyName = "xxx"
+$key = "xxx"
 $sasToken = Create-SasToken -resourceUri $resourceUri -keyName $keyName -key $key
 Write-Output $sasToken

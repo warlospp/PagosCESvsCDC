@@ -2,7 +2,7 @@ USE bdd_ces;
 GO
 
 -- 1. Crear clave maestra
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '...';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'XXX';
 GO
 -- 2. Crear una credencial con autenticación SASL/SSL
 DROP DATABASE SCOPED CREDENTIAL eventhub_credential;
@@ -21,7 +21,7 @@ GO
 EXEC sys.sp_create_event_stream_group
     @stream_group_name = N'PagosCESGroup',
     @destination_type = N'AzureEventHubsAmqp',
-    @destination_location = N'arquitecturadatosdemoces.servicebus.windows.net/pagos_ces',
+    @destination_location = N'xxx.servicebus.windows.net/xxx',
     @destination_credential = eventhub_credential,
     @max_message_size_bytes = 1048576,
     @partition_key_scheme = N'None';
@@ -31,7 +31,7 @@ EXEC sys.sp_add_object_to_event_stream_group
     N'PagosCESGroup',
     N'dbo.Pagos';
 GO
-EXEC sys.sp_help_change_feed_table @source_schema = 'dbo', @source_name = 'pagos'
+EXEC sys.sp_help_change_feed_table @source_schema = 'dbo', @source_name = 'Pagos'
 GO
 -- 6. Validar errores
 select * FROM sys.dm_change_feed_errors order by entry_time desc

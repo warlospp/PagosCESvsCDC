@@ -9,7 +9,7 @@ DROP DATABASE SCOPED CREDENTIAL eventhub_credential;
 GO
 CREATE DATABASE SCOPED CREDENTIAL eventhub_credential
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-SECRET = 'SharedAccessSignature sr=https%3a%2f%2farquitecturadatosdemoces.servicebus.windows.net%2fpagos_ces&sig=1cTuzddRfhqWZK5GM%2bce5FE2ky2SdshDunCV4vMHtQM%3d&se=1765218226&skn=RootManageSharedAccessKey';
+SECRET = 'xxx';
 GO
 SELECT * FROM sys.database_scoped_credentials WHERE name = 'eventhub_credential';
 -- 3. Habilitar Change Event Streaming en la base de datos

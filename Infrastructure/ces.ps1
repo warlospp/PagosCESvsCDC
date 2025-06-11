@@ -15,7 +15,7 @@ function Create-SasToken {
 }
 
 $resourceUri = "https://arquitecturadatosdemoces.servicebus.windows.net/pagos_ces"  
-$keyName = "RootManageSharedAccessKey"
-$key = "Oa8J/Zenf+jtntTTW0CZbgj3dow0WLaz8+AEhDgfUf0="
+$keyName = "..."
+$key = "..."
 $sasToken = Create-SasToken -resourceUri $resourceUri -keyName $keyName -key $key
 Write-Output $sasToken

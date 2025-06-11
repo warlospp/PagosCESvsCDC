@@ -2,7 +2,7 @@ USE bdd_ces;
 GO
 
 -- 1. Crear clave maestra
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Admin.123';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '...';
 GO
 -- 2. Crear una credencial con autenticación SASL/SSL
 DROP DATABASE SCOPED CREDENTIAL eventhub_credential;

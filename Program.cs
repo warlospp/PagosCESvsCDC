@@ -17,10 +17,10 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // Agregar servicios de base de datos
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<ApplicationDbContextCes>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CES")), ServiceLifetime.Scoped);
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<ApplicationDbContextCdc>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CDC")), ServiceLifetime.Scoped);
 
 builder.Services.AddControllers();

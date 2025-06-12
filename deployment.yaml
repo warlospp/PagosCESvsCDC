@@ -16,4 +16,4 @@ spec:
       - name: pagos-api
         image: warlospp/pagos-api:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8080

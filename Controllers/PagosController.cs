@@ -21,7 +21,7 @@ public class PagosController : ControllerBase
     {
         var pagos = new List<Pago>();
         var rnd = new Random();
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 1; i++)
         {
             pagos.Add(new Pago
             {

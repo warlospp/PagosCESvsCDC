@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: pagos-api-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: pagos-api
   ports:

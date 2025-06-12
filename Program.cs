@@ -26,11 +26,8 @@ builder.Services.AddDbContext<ApplicationDbContextCdc>(options =>
 builder.Services.AddControllers();
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pagos API CESvsCDC v1"));
-}
+app.UseSwagger();
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pagos API CESvsCDC v1"));
 
 app.MapControllers();
 app.Run();

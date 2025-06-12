@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app
+  name: pagos-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo
+      app: pagos-api
   template:
     metadata:
       labels:
-        app: demo
+        app: pagos-api
     spec:
       containers:
-      - name: demo
-        image: miacr.azurecr.io/demo-app:v2  # <-- Cambia esto por tu imagen real
+      - name: pagos-api
+        image: warlospp/pagos-api:v1
         ports:
         - containerPort: 80
